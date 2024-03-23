@@ -38,4 +38,6 @@ jobs:
 
       # Builds a Python package
       - name: Build a package
-        run: python -m build
+        run: |
+          pip install build
+          python -m build
