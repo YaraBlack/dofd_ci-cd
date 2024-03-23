@@ -3,7 +3,7 @@ requires = ["hatchling"]
 build-backend = "hatchling.build"
 
 [project]
-name = "GitHub_Actions_package"
+name = "dofd_ci-cd"
 version = "0.0.1"
 authors = [
   { name="YaraBlack", email="author@example.com" },
@@ -21,5 +21,5 @@ Homepage = "https://github.com/YaraBlack/dofd_ci-cd"
 Issues = "https://github.com/YaraBlack/dofd_ci-cd/issues"
 
 [tool.hatch.build.targets.wheel]
-main = ["app.py", "db.py"]
+main = ["./app.py", "./db.py"]
 
