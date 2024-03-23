@@ -19,3 +19,10 @@ classifiers = [
 [project.urls]
 Homepage = "https://github.com/YaraBlack/dofd_ci-cd"
 Issues = "https://github.com/YaraBlack/dofd_ci-cd/issues"
+
+[tool.hatch.build.targets.sdist]
+include = [
+  "app.py",
+  "db.py",
+]
+
