@@ -75,7 +75,7 @@ class Product(Resource):
 api.add_resource(Products, "/api/products")
 api.add_resource(Product, "/api/products/<int:product_id>")
 
-
+# Just a comment for testing
 if __name__ == "__main__":
 
     def ipv4_or_localhost_regex_type(arg_value):
