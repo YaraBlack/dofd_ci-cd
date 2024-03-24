@@ -36,8 +36,19 @@ jobs:
       - name: Set dependencies
         run: pip install -r requirements.txt
 
+      - name: Testing app.py
+        id: test
+        run: python -m unittest -v tests.py
+
+      - name: Handle test failure
+        if: ${{ steps.test.outcome != 'success' }}
+        run: |
+          echo "Tests failed. Please check your code."
+          exit 1
+
       # Builds a Python package
       - name: Build a package
+        if: ${{ steps.test.outcome == 'success' }}
         run: |
           pip install build
           python -m build
